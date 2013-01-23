@@ -1,0 +1,175 @@
+body {
+	margin: 0px auto;
+	min-width: 300px;
+	max-width: 975px; /* totally arbitrary. trying to not break no-printer message */
+    line-height: 23px;
+    font-size: 13px;
+    color: #333;
+    font-family: "Arial",Helvetica,sans-serif;
+}
+
+h1 {
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 26px;
+	margin: 0px 0px 20px;
+}
+
+p {
+	margin: 0 0 10px 0;
+}
+
+/********************************** HEADER ***********************************/
+
+header {
+    border-bottom: 1px solid #CCCCCC;
+    margin-bottom: 20px;
+    height: 60px;
+    padding: 7px 0 0;
+}
+
+.logo {
+    background: url("https://www.mercadopago.com/org-img/MP3/logo_main225x52.jpg") no-repeat scroll 0 0 transparent;
+    display: block;
+    float: left;
+    height: 52px;
+    text-indent: -9999px;
+    width: 225px;
+}
+
+.payer-account {
+	position: relative;
+	right: 0;
+	top: 5px;
+	float:right;
+	color: #333;
+	font-size: 13px;
+}
+
+#country-selector {
+    float: right;
+    margin-top: -40px;
+}
+
+.new-promotion {
+    float: right;
+}
+
+/********************************** TABLE ***********************************/
+
+.ch-datagrid-controls {
+    margin: 30px 0;
+}
+
+.ch-datagrid-controls caption, .ch-datagrid caption {
+    font-size: 15px;
+    font-weight: normal;
+    margin: 30px 0 10px;
+    text-align: left;
+}
+
+.ch-datagrid-controls tbody tr, .ch-datagrid tbody tr {
+    border-top: 1px solid #EDEDED;
+    height: 40px;
+}
+
+.entity {
+    font-weight: bold;
+    line-height: 17px;
+}
+
+.entity span {
+    color: #999;
+    font-size: 12px;
+    display: block;
+    font-weight: normal;
+}
+
+.period {
+    color: #999;
+    font-size: 12px;
+}
+
+.terms {
+    text-align: right;
+}
+
+.ch-icon-ok:before, .ch-icon-ok {
+    color: #468847;
+}
+
+.ch-icon-remove:before, .ch-icon-remove {
+    color: #B94A48;
+}
+
+.ch-icon-chevron-down:first-child {
+    padding-left: 12px;
+}
+
+.ch-icon-chevron-up:before, .ch-icon-chevron-down:before {
+    font-size: 14px;
+}
+
+.ch-datagrid-controls th:last-child, .ch-datagrid th:last-child {
+    text-align: left;
+}
+
+.ch-form-row label {
+    width: 70px;
+    font-weight: bold;
+}
+
+.ch-form-row {
+    display: inline;
+    margin-bottom: 0;
+    padding: 5px 0px;
+}
+
+.ch-form-row a {
+    display: block;
+    margin-left: 183px;
+}
+
+.ch-form-actions {
+    margin-left: 50px;
+    text-align: left;
+    display: inline;
+    
+}
+
+.ch-form-options {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+p.ch-form-row label.conceptType {
+    vertical-align: top;
+}
+
+
+/************** Sin legales ********************/
+.ch-box-attention {
+    background: none;
+}
+
+.ch-box-attention, .ch-box-attention:before {
+    background: none;
+}
+
+.ch-box-attention:before, .ch-box-help:before, .ch-box-information:before, .ch-box-error:before, .ch-box-ok:before {
+    left: 15px;
+    position: absolute;
+    top: 10px;
+}
+
+/********************************** FOOTER ***********************************/
+
+footer {
+    color: #818181;
+    font-size: 10px;
+    text-align: center;
+    border-top: 1px dotted #DDDDDD;
+    padding-bottom: 10px;
+    margin-top: 30px;
+}
