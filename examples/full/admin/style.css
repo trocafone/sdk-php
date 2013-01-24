@@ -46,15 +46,6 @@ header {
 	font-size: 13px;
 }
 
-#country-selector {
-    float: right;
-    margin-top: -40px;
-}
-
-.new-promotion {
-    float: right;
-}
-
 /********************************** TABLE ***********************************/
 
 .ch-datagrid-controls {
@@ -161,6 +152,10 @@ p.ch-form-row label.conceptType {
     left: 15px;
     position: absolute;
     top: 10px;
+}
+
+tfoot td {
+    text-align: right;
 }
 
 /********************************** FOOTER ***********************************/
