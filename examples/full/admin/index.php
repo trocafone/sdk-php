@@ -44,8 +44,8 @@
 		</form>
 		<?php
 			if ($_SERVER["REQUEST_METHOD"] == "POST") {
-				require_once "mercadopago.php";
-				require_once "config.php";
+				require_once "../mercadopago.php";
+				require_once "../config.php";
 
 				$mp = new MP ($client_id, $client_secret);
 
