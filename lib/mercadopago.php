@@ -399,6 +399,17 @@ class MPRestClient {
         $api_http_code = curl_getinfo($connect, CURLINFO_HTTP_CODE);
 
         if ($api_result === FALSE) {
+            \Log::error('MP - Failed request', [
+                'request_method' => $method,
+                'request_uri' => $uri,
+                'request_data' => $data,
+                'request_content_type' => $content_type,
+                'error_code' => $api_http_code,
+                'curl_getinfo' => curl_getinfo($connect),
+                'curl_errno' => curl_errno($connect),
+                'curl_error' => curl_error($connect)
+            ]);
+
             throw new Exception (curl_error ($connect));
         }
 
@@ -418,6 +429,18 @@ class MPRestClient {
                     }
                 }
             }
+
+            \Log::error('MP - Request error', [
+                'response' => $response,
+                'request_method' => $method,
+                'request_uri' => $uri,
+                'request_data' => $data,
+                'request_content_type' => $content_type,
+                'response_message' => $message,
+                'curl_getinfo' => curl_getinfo($connect),
+                'curl_errno' => curl_errno($connect),
+                'curl_error' => curl_error($connect)
+            ]);
 
             throw new Exception ($message, $response['status']);
         }
