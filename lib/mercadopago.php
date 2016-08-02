@@ -399,7 +399,7 @@ class MPRestClient {
         $api_http_code = curl_getinfo($connect, CURLINFO_HTTP_CODE);
 
         if ($api_result === FALSE) {
-            \Log::error('MP - Failed request', [
+            \Log::info('MP - Failed request', [
                 'request_method' => $method,
                 'request_uri' => $uri,
                 'request_data' => $data,
@@ -430,7 +430,7 @@ class MPRestClient {
                 }
             }
 
-            \Log::error('MP - Request error', [
+            \Log::info('MP - Request error', [
                 'response' => $response,
                 'request_method' => $method,
                 'request_uri' => $uri,
