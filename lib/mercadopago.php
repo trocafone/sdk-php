@@ -399,7 +399,7 @@ class MPRestClient {
         $api_http_code = curl_getinfo($connect, CURLINFO_HTTP_CODE);
 
         if ($api_result === FALSE) {
-            \Log::error('MP - Failed request', [
+            \Log::info('MP - Failed request', [
                 'request_method' => $method,
                 'request_uri' => $uri,
                 'request_data' => $data,
@@ -425,12 +425,17 @@ class MPRestClient {
                     $message .= " - ".$response['response']['cause']['code'].': '.$response['response']['cause']['description'];
                 } else if (is_array ($response['response']['cause'])) {
                     foreach ($response['response']['cause'] as $cause) {
-                        $message .= " - ".$cause['code'].': '.$cause['description'];
+                        if (is_array($cause)) {
+                            $message .= " - ".(isset($cause['code']) ? $cause['code'] : 'NO_CODE' ).': '.(isset($cause['description']) ? $cause['description'] : 'NO_DESCRIPTION' );
+                        }
+                        else if (is_string($cause) {
+                            $message .= " - ".$cause;
+                        }
                     }
                 }
             }
 
-            \Log::error('MP - Request error', [
+            \Log::info('MP - Request error', [
                 'response' => $response,
                 'request_method' => $method,
                 'request_uri' => $uri,
